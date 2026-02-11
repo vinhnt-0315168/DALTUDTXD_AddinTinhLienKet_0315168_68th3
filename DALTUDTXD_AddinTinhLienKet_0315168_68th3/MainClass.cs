@@ -1,4 +1,4 @@
-
+﻿
 using Autodesk.Revit.UI;
 using System.Reflection;
 using System.Windows.Media.Imaging;
@@ -12,7 +12,7 @@ namespace DALTUDTXD_AddinTinhLienKet_0315168_68th3
             //Add a new ribbon tab
             application.CreateRibbonTab("DALTUDTXD68TH3");
             // Add a new ribbon panel
-            RibbonPanel ribbonPanel = application.CreateRibbonPanel("DALTUDTXD68TH3", "C?u ki?n");
+            RibbonPanel ribbonPanel = application.CreateRibbonPanel("DALTUDTXD68TH3", "Cấu kiện");
             // Create a push button to trigger a command add it to the ribbon panel.
             string thisAssemblyPath = Assembly.GetExecutingAssembly().Location;
             PushButtonData buttonData = new PushButtonData("cmdInforSteels",
@@ -25,11 +25,25 @@ namespace DALTUDTXD_AddinTinhLienKet_0315168_68th3
             Uri uriImage = new Uri(@"E:\vs26\DALTUDTXD_AddinTinhLienKet_0315168_68th3\DALTUDTXD_AddinTinhLienKet_0315168_68th3\Assets\Icons\Steel I Beam.ico");
             BitmapImage largeImage = new BitmapImage(uriImage);
             pushButton.LargeImage = largeImage;
+
+            //tạo nút thứ 2
+            PushButtonData buttonData2 = new PushButtonData("cmdInforJoin",
+               "Join", thisAssemblyPath, "DALTUDTXD_AddinTinhLienKet_0315168_68th3.ExternalComand.InforJoin");
+            //khai báo nút
+            PushButton pushButton2 = ribbonPanel.AddItem(buttonData2) as PushButton;
+            // Optionally, other properties may be assigned to the button
+            // a) tool-tip
+            pushButton.ToolTip = "Chọn cấu kiện";
+            // b) large bitmap
+            Uri uriImage1 = new Uri(@"E:\vs26\DALTUDTXD_AddinTinhLienKet_0315168_68th3\DALTUDTXD_AddinTinhLienKet_0315168_68th3\Assets\Icons\Link.png");
+            BitmapImage largeImage1 = new BitmapImage(uriImage);
+            pushButton.LargeImage = largeImage;
+
             return Result.Succeeded;
         }
         public Result OnShutdown(UIControlledApplication application)
         {
-            TaskDialog.Show("Th�ng b�o", "Add-in ?� t?t th�nh c�ng!");
+            TaskDialog.Show("Thông báo", "Add-in ?ã t?t thành công!");
             return Result.Succeeded;
         }
     }
