@@ -26,6 +26,7 @@ namespace DALTUDTXD_AddinTinhLienKet_0315168_68th3
             BitmapImage largeImage = new BitmapImage(uriImage);
             pushButton.LargeImage = largeImage;
 
+
             //tạo nút thứ 2
             PushButtonData buttonData2 = new PushButtonData("cmdInforJoin",
                "Join", thisAssemblyPath, "DALTUDTXD_AddinTinhLienKet_0315168_68th3.ExternalComand.InforJoin");
@@ -37,6 +38,20 @@ namespace DALTUDTXD_AddinTinhLienKet_0315168_68th3
             // b) large bitmap
             Uri uriImage1 = new Uri(@"E:\vs26\DALTUDTXD_AddinTinhLienKet_0315168_68th3\DALTUDTXD_AddinTinhLienKet_0315168_68th3\Assets\Icons\Link.png");
             BitmapImage largeImage1 = new BitmapImage(uriImage);
+            pushButton.LargeImage = largeImage;
+
+
+            //tọa nút thứ 3
+            PushButtonData buttonData3 = new PushButtonData("cmdExport",
+               "Export Report", thisAssemblyPath, "DALTUDTXD_AddinTinhLienKet_0315168_68th3.ExternalComand.InforExport");
+            //khai báo nút
+            PushButton pushButton3 = ribbonPanel.AddItem(buttonData3) as PushButton;
+            // Optionally, other properties may be assigned to the button
+            // a) tool-tip
+            pushButton.ToolTip = "Xuất báo cáo";
+            // b) large bitmap
+            Uri uriImage2 = new Uri(@"E:\vs26\DALTUDTXD_AddinTinhLienKet_0315168_68th3\DALTUDTXD_AddinTinhLienKet_0315168_68th3\Assets\Icons\Bookmark.png");
+            BitmapImage largeImage2 = new BitmapImage(uriImage);
             pushButton.LargeImage = largeImage;
 
             return Result.Succeeded;
