@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "DALTUDTXD_AddinTinhLienKet_0315168_68th3": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "E:\\Autodesk\\Revit 2025\\Revit.exe"
+    }
+  }
+}

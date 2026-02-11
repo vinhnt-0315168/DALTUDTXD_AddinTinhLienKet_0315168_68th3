@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>DALTUDTXD 68TH3 Addin Tinh Lien Ket</Name>
+		<Assembly>DALTUDTXD\DALTUDTXD_AddinTinhLienKet_0315168_68th3.dll</Assembly>
+		<AddInId>1DF1502B-E6A3-4CCE-928F-7281C65F92BB</AddInId>
+		<FullClassName>DALTUDTXD_AddinTinhLienKet_0315168_68th3.MainClass</FullClassName>
+		<VendorId>bafi2</VendorId>
+		<VendorDescription>HUCE</VendorDescription>
+	</AddIn>
+</RevitAddIns>
