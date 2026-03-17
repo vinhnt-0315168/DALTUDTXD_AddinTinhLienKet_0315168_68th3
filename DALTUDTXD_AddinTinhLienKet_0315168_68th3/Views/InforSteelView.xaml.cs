@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace DALTUDTXD_AddinTinhLienKet_0315168_68th3.Views
 {
     /// <summary>
-    /// Interaction logic for ExportView.xaml
+    /// Interaction logic for InforSteelView.xaml
     /// </summary>
-    public partial class ExportView : Window
+    public partial class InforSteelView : Window
     {
-        public ExportView()
+        public InforSteelView()
         {
             InitializeComponent();
-        }
-
-        private void txtFilePath_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

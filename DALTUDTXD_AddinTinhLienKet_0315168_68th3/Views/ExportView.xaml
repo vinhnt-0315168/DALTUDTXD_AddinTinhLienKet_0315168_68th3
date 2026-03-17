@@ -33,7 +33,7 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <TextBox x:Name="txtFilePath" Height="28" VerticalContentAlignment="Center" Padding="5,0"/>
-                <Button Grid.Column="1" Content="Browse..." Width="80" Margin="10,0,0,0" Click="Browse_Click"/>
+                <Button Grid.Column="1" Content="zzzz" Width="80" Margin="10,0,0,0" Click="Browse_Click"/>
             </Grid>
 
      
