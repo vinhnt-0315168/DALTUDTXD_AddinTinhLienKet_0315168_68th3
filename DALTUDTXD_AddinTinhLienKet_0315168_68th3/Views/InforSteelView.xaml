@@ -1,0 +1,40 @@
+﻿<Window x:Class="DALTUDTXD_AddinTinhLienKet_0315168_68th3.Views.InforSteelView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DALTUDTXD_AddinTinhLienKet_0315168_68th3.Views"
+        mc:Ignorable="d"
+        Title="InforSteelView" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="THÔNG SÓ CẤU KIỆN" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="#2980B9"/>
+
+        <DataGrid Grid.Row="1" x:Name="dgSteelElements" 
+                  AutoGenerateColumns="False" 
+                  CanUserAddRows="False"
+                  SelectionMode="Extended"
+                  Background="White" AlternatingRowBackground="#F2F2F2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ElementId}" Width="80"/>
+                <DataGridTextColumn Header="Tên cấu kiện" Binding="{Binding ElementName}" Width="*"/>
+                <DataGridTextColumn Header="Vật liệu" Binding="{Binding MaterialName}" Width="120"/>
+                <DataGridTextColumn Header="h (mm)" Binding="{Binding Height}" Width="60"/>
+                <DataGridTextColumn Header="b (mm)" Binding="{Binding Width}" Width="60"/>
+                <DataGridTextColumn Header="tw (mm)" Binding="{Binding WebThickness}" Width="60"/>
+                <DataGridTextColumn Header="tf (mm)" Binding="{Binding FlangeThickness}" Width="60"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <TextBlock x:Name="txtCount" Text="Số lượng: 0" VerticalAlignment="Center" Margin="0,0,20,0" FontWeight="Bold"/>
+            <Button Content="Tính toán liên kết" Width="150" Height="35" Background="#27AE60" Foreground="White" BorderThickness="0"/>
+            <Button Content="Quét mô hình" Width="150" Height="35" Background="#27AE60" Foreground="White" BorderThickness="0"/>
+        </StackPanel>
+    </Grid>
+</Window>
