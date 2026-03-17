@@ -26,9 +26,6 @@ namespace DALTUDTXD_AddinTinhLienKet_0315168_68th3.ExternalComand
                 message = ex.Message;
                 return Result.Failed;
             }
-
-
-
             return Autodesk.Revit.UI.Result.Succeeded;
         }
     }
