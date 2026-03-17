@@ -23,5 +23,10 @@ namespace DALTUDTXD_AddinTinhLienKet_0315168_68th3.Views
         {
             InitializeComponent();
         }
+
+        private void txtFilePath_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

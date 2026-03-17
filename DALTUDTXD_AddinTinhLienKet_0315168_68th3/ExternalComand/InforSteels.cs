@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using DALTUDTXD_AddinTinhLienKet_0315168_68th3.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,8 @@ namespace DALTUDTXD_AddinTinhLienKet_0315168_68th3.ExternalComand
         {
             try
             {
-                TaskDialog.Show("Steels", "Thông số thép tổ hợp");
+                InforSteelView joinView = new InforSteelView();
+                joinView.ShowDialog();
                 return Result.Succeeded;
             }
             catch (Exception ex)
